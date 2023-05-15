@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quote</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .quote-container {
+      margin-bottom: 20px;
+    }
+
+    .quote-text {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .quote-author {
+      font-size: 18px;
+    }
+
+    .quote-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+    <h1>5.Create a web page with a button that, when clicked, displays a random quote from a list of quotes.</h1>
+    <h1>Random Quote</h1>
+  <div class="quote-container">
+    <p class="quote-text" id="quoteText"></p>
+    <p class="quote-author" id="quoteAuthor"></p>
+  </div>
+  <button class="quote-button" id="quoteButton">Show Quote</button>
+
+  <script>
+    var quotes = [
+      { text: "The greatest glory in living lies not in never falling, but in rising every time we fall.", author: "Nelson Mandela" },
+      { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+      { text: "If life were predictable it would cease to be life, and be without flavor.", author: "Eleanor Roosevelt" },
+      { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+      { text: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
+      { text: "تجھ سے روشن ہونے کا عالم ہوتا ہے مجھ سے روشن ہونے کی وجہ تو ہو", author: "فیض احمد فیض" },
+      { text: "جو بابا کا نام لیتا ہے، وہ اُس کا غلام ہوتا ہے", author: "اشفاق احمد" },
+      { text: "میں یہاں کیا کروں گا، اس کا فیصلہ تم کرتے ہو", author: "علامہ اقبال" },
+      { text: "لوگ کھو جاتے ہیں کچھ باتیں اکتھے کر لیتے ہیں", author: "نیم راشد" }
+    ];
+
+    var quoteButton = document.getElementById("quoteButton");
+    var quoteText = document.getElementById("quoteText");
+    var quoteAuthor = document.getElementById("quoteAuthor");
+
+    quoteButton.addEventListener("click", function() {
+      var randomIndex = Math.floor(Math.random() * quotes.length);
+      var randomQuote = quotes[randomIndex];
+      quoteText.textContent = randomQuote.text;
+      quoteAuthor.textContent = "- " + randomQuote.author;
+    });
+  </script>
+</body>
+</html>

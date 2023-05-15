@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Text from Textbox</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .input-container {
+      margin-bottom: 20px;
+    }
+
+    .text-input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .alert-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+    <h1>3.Create a web page with a text box and a button. When the button is clicked, display an alert box with the text that was entered in the text box.
+    </h1>
+    <h1>Display Text from Textbox</h1>
+  <div class="input-container">
+    <input type="text" class="text-input" id="myInput" placeholder="Enter text">
+    <button class="alert-button" id="alertButton">Show Text</button>
+  </div>
+
+  <script>
+    var alertButton = document.getElementById("alertButton");
+    var myInput = document.getElementById("myInput");
+
+    alertButton.addEventListener("click", function() {
+      var inputText = myInput.value;
+      if (inputText !== "") {
+        alert(inputText);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Image</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .image-container {
+      margin-bottom: 20px;
+    }
+
+    .image {
+      max-width: 400px;
+    }
+
+    .change-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+    <h1>4.Create a web page with an image and a button. When the button is clicked, change the image to a different one.
+    </h1>
+    <h1>Change Image</h1>
+  <div class="image-container">
+    <img src="download.jpg" alt="Image" class="image" id="myImage">
+  </div>
+  <button class="change-button" id="changeButton">Change Image</button>
+
+  <script>
+    var changeButton = document.getElementById("changeButton");
+    var myImage = document.getElementById("myImage");
+
+    changeButton.addEventListener("click", function() {
+      myImage.src = "download2.jpg";
+    });
+  </script>
+</body>
+</html>
